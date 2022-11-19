@@ -149,10 +149,6 @@ class BasicsMathsFunction {
         return moves;
     }
 
-    
-}
-
-class Main {
     public static void main(String args[]) {
 
         BasicsMathsFunction b = new BasicsMathsFunction();
@@ -177,4 +173,5 @@ class Main {
         
         b.minMoves();
     }
+    
 }
