@@ -28,18 +28,18 @@ class BasicsMathsFunction {
     void checkArmstrong(int number) {
 
         int sum=0;
-        int num;
-        int temp = number;
-        while(temp!=0) {
-            num = temp%10;
-            sum = sum + (num*num*num);
-            temp=temp/10;
+        int lastDigit;
+        int originalNumber = number;
+        while(number > 0) {
+            lastDigit = number%10;
+            sum = sum + (lastDigit*lastDigit*lastDigit);
+            number=number/10;
         }
 
-        if (sum == number)
-            System.out.println(" is an Armstrong number.");
+        if (sum == originalNumber)
+            System.out.println(originalNumber+" is an Armstrong number.");
         else
-            System.out.println(" is not an Armstrong number.");
+            System.out.println(originalNumber+" is not an Armstrong number.");
 
     }
 
@@ -75,23 +75,24 @@ class BasicsMathsFunction {
     }
 
     //6
-    void checkPrime(int number) {
+    Boolean checkPrime(int number) {
 
         int flag = 0;
         if (number < 2) {
-            flag++;
+            flag=1;
         }
 
         for (int i = 2; i < number / 2; i++) {
             if (number % i == 0) {
-                flag++;
+                flag=1;
+                break;
             }
         }
 
-        if (flag > 0)
-            System.out.println("Not Prime Number");
+        if (flag==1)
+            return false;
         else
-            System.out.println("Prime Number");
+            return true;
 
     }
 
@@ -114,9 +115,11 @@ class BasicsMathsFunction {
 
     //8
     int reverseInteger(int number) {
+     
         int reverse=0;
         while(number>0) {
-            reverse=reverse*10+number%10;
+            int lastDigit = number&10;
+            reverse=reverse*10+lastDigit;
             number=number/10;
         }
         return reverse;
@@ -132,6 +135,7 @@ class BasicsMathsFunction {
 
     //11
     int minMoves() {
+        
         int moves=0,sum=0;
         int nums[]={1,2,3,4};
         int min=Integer.MAX_VALUE;
@@ -172,9 +176,9 @@ class BasicsMathsFunction {
         
         // b.checkPerfectnumber(28);
         
-        // b.checkPrime(6);
+    //    System.out.println( b.checkPrime(5));
         
-        // b.checkArmstrong(153);
+        b.checkArmstrong(153);
         
         // System.out.println(b.factorial(5));
         
@@ -182,7 +186,7 @@ class BasicsMathsFunction {
 
         // b.checkStrong(145);
 
-        // b.reverseInteger(123);
+        // System.out.println(b.reverseInteger(3412345));
         
         // b.palindromeNumber(313);
 
@@ -190,7 +194,7 @@ class BasicsMathsFunction {
         // System.out.println(b.factorial(5));
         // // b.minMoves();
 
-        b.fibonacciSeries(10);
+        // b.fibonacciSeries(10);
     }
     
 }
