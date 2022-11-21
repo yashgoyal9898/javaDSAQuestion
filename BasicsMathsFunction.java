@@ -78,7 +78,6 @@ class BasicsMathsFunction {
     void checkPrime(int number) {
 
         int flag = 0;
-
         if (number < 2) {
             flag++;
         }
@@ -87,7 +86,6 @@ class BasicsMathsFunction {
             if (number % i == 0) {
                 flag++;
             }
-
         }
 
         if (flag > 0)
@@ -149,6 +147,23 @@ class BasicsMathsFunction {
         return moves;
     }
 
+    //12
+    void fibonacciSeries(int number) {
+
+        int firstNumber = 0;
+        int secondNumber = 1;
+        int nextNumber;
+
+        System.out.print(firstNumber+", "+secondNumber+", ");
+        
+        for(int i=2; i <= number; ++i) {
+            nextNumber = firstNumber + secondNumber;
+            System.out.print(nextNumber + ", ");
+            firstNumber=secondNumber;
+            secondNumber=nextNumber;
+        } 
+    }
+
     public static void main(String args[]) {
 
         BasicsMathsFunction b = new BasicsMathsFunction();
@@ -157,7 +172,7 @@ class BasicsMathsFunction {
         
         // b.checkPerfectnumber(28);
         
-        // b.checkPrime(21);
+        // b.checkPrime(6);
         
         // b.checkArmstrong(153);
         
@@ -170,8 +185,12 @@ class BasicsMathsFunction {
         // b.reverseInteger(123);
         
         // b.palindromeNumber(313);
+
         
-        b.minMoves();
+        // System.out.println(b.factorial(5));
+        // // b.minMoves();
+
+        b.fibonacciSeries(10);
     }
     
 }
