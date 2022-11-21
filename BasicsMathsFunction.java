@@ -61,6 +61,7 @@ class BasicsMathsFunction {
 
     //5
     void checkStrong(int Number) {
+        
         int num,sum=0;
         int temp=Number;
         while(Number!=0) {
