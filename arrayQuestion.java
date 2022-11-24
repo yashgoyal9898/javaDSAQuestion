@@ -4,6 +4,7 @@ class arrayQuestion {
 
     // 1 MINIMUM Element
     void minElement(int array[]) {
+
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < min) {
@@ -15,17 +16,19 @@ class arrayQuestion {
 
     // 2 MAXIMUM ELEMENT
     void maxElement(int array[]) {
+
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < array.length; i++) {
             if (array[i] > max) {
                 max = array[i];
             }
         }
-        System.out.println("MINIMUM Element " + max);
+        System.out.println("Maximum Element " + max);
     }
 
     // 3 SUM OF ARRAY ELEMENT
     void sumofArray(int array[]) {
+
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum = sum + array[i];
@@ -349,7 +352,7 @@ class arrayQuestion {
 
         // arr.alternateReverse(array);
 
-        // arr.uniqueElement(array);
+        arr.uniqueElement(array);
 
         // arr.numberofOccurences(array);
 
@@ -361,7 +364,7 @@ class arrayQuestion {
 
         // arr.kthlargestElement(array, 2);
 
-        arr.maxSubArray(array);
+        // arr.maxSubArray(array);
     }
 
 }
