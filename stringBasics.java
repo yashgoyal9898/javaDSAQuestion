@@ -7,20 +7,33 @@ class stringQuestion {
     void stringReverse() {
 
         // Using STRING BULDER
-        StringBuilder sb = new StringBuilder("hellouit");
+        StringBuilder sb = new StringBuilder("hsay");
 
-        for (int i = 0; i < sb.length() / 2; i++) {
-            int start = i;
-            int end = sb.length() - 1 - i;
+        // for (int i = 0; i < sb.length() / 2; i++) {
+        //     int start = i;
+        //     int end = sb.length() - 1 - i;
 
-            char startChar = sb.charAt(start);
-            char endChar = sb.charAt(end);
+        //     char startChar = sb.charAt(start);
+        //     char endChar = sb.charAt(end);
 
-            sb.setCharAt(start, endChar);
-            sb.setCharAt(end, startChar);
+        //     sb.setCharAt(start, endChar);
+        //     sb.setCharAt(end, startChar);
+        // }
+
+        int s=0,e=sb.length()-1;
+        while(s<e) {
+
+            char startChar = sb.charAt(s);
+            char endChar = sb.charAt(e);
+
+            sb.setCharAt(s, endChar);
+            sb.setCharAt(e, startChar);
+            s++;
+            e--;
+
         }
-        System.out.println(sb);
 
+        System.out.println(sb);
     }
 
     // 2 Check Palindrome
@@ -158,7 +171,19 @@ public class stringBasics {
         // sq.stringReverse();
         // sq.checkPalindrome("heelo");
         // sq.maxOccurrencesCharacter("output");
-        sq.replaceSpaces("My name is Yash Goyal");
+        // sq.replaceSpaces("My name is Yash Goyal");
+
+        String str = "hello Yash";
+        char strArray[] = str.toCharArray();  
+        StringBuffer stringBuffer = new StringBuffer();  
+        for (int i = 0; i < strArray.length; i++) {  
+            if ((strArray[i] != ' ') && (strArray[i] != '\t')) {  
+                stringBuffer.append(strArray[i]);  
+            }  
+        }  
+        System.out.println(stringBuffer);
+        String noSpaceStr2 = stringBuffer.toString();  
+        System.out.println(noSpaceStr2);  
 
     }
 }
