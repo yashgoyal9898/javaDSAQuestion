@@ -38,6 +38,7 @@ public class Pattern {
             }
             System.out.print("\n");
         }
+
     }
     
 
@@ -67,9 +68,24 @@ public class Pattern {
         }
 
     }
-  
-    public static void main(String args[]) {
-        Pattern p = new Pattern();
+
+    void fullPrymaid() {
+
+        for (int i=0; i<5; i++)
+        {
+            for (int j=5-i; j>1; j--)
+            {
+                System.out.print(" ");
+            }
+            for (int j=0; j<=i; j++ )
+            {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+    }
+    void prymaid() {
 
         for(int i=0;i<5;i++) {
             for(int j=0;j<=i;j++) {
@@ -81,6 +97,19 @@ public class Pattern {
                 }
             }
             System.out.print("\n");
+        }
+
+    }
+  
+    public static void main(String args[]) {
+        Pattern p = new Pattern();
+
+        int n=5;
+        for(int i=5;i>0;i--) {
+            for(int j=i;j>0;j--) {
+                System.out.print(j+" ");
+            }
+            System.out.println();
         }
         
     }
