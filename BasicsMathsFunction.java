@@ -61,7 +61,7 @@ class BasicsMathsFunction {
 
     //5
     void checkStrong(int Number) {
-        
+
         int num,sum=0;
         int temp=Number;
         while(Number!=0) {
@@ -83,7 +83,7 @@ class BasicsMathsFunction {
             flag=1;
         }
 
-        for (int i = 2; i < number / 2; i++) {
+        for (int i = 2; i < number; i++) {
             if (number % i == 0) {
                 flag=1;
                 break;
@@ -94,6 +94,18 @@ class BasicsMathsFunction {
             return false;
         else
             return true;
+
+    }
+
+    //Prime Number Seires
+    void primeNumberSeries(int number) {
+
+        for(int i=0;i<number;i++) {
+            if(checkPrime(i)) 
+                System.out.println(i+" ");
+            
+                
+        }
 
     }
 
@@ -177,9 +189,10 @@ class BasicsMathsFunction {
         
         // b.checkPerfectnumber(28);
         
-    //    System.out.println( b.checkPrime(5));
+       System.out.println( b.checkPrime(4));
+    b.primeNumberSeries(20);
         
-        b.checkArmstrong(153);
+        // b.checkArmstrong(153);
         
         // System.out.println(b.factorial(5));
         
